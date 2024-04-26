@@ -1,0 +1,37 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+body {
+    font-size: small;
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+.navbarNegro {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+}
+.navbarNegro a {
+    color: white;
+}
+.navbarNegro a:visited {
+    color: white;
+}
+.navbarLinks {
+    display: flex;
+}
+.navbarLinks li {
+    margin: auto 1rem;
+}
+.navbarMain {
+    background-color: #004f45;
+}
