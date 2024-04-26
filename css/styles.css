@@ -6,9 +6,15 @@ html {
     box-sizing: inherit;
   }
 body {
+    font-family: "Roboto", sans-serif;
     font-size: small;
+    background: #eee;
 }
-
+.mediumFont {
+    font-size: medium;
+    text-decoration: none;
+}
+/*----------------------------------------------------*/
 
 .navbar {
     display: flex;
@@ -26,12 +32,36 @@ body {
 .navbarNegro a:visited {
     color: white;
 }
+.searchIcon {
+    margin-top: .5rem;
+}
 .navbarLinks {
     display: flex;
 }
 .navbarLinks li {
     margin: auto 1rem;
+    list-style: none;
 }
 .navbarMain {
     background-color: #004f45;
+}
+.icons {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.contFooter {
+    display: flex;
+    flex-direction: column;
+    background-color: #004f45;
+}
+.acreditacion {
+    display: flex;
+    background-color: #00362f;
+}
+.acreditacion img {
+    max-width: 10%;
+}
+.footerLinks {
+    display: flex;
 }
