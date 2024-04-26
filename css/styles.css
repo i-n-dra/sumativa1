@@ -30,6 +30,7 @@ body {
 }
 .whiteText a {
     color: white;
+    text-decoration: none;
 }
 .whiteText a:visited {
     color: white;
@@ -93,6 +94,86 @@ body {
     height: .5rem;
 }
 
+/* main */
+.slideshow {
+    display: flex;
+}
+.slideshow img {
+    width: 100%;
+    z-index: 1;
+}
+.sideText {
+    background-color: #004f45;
+    color: #fff;
+    z-index: 1;
+    padding: .5rem 5rem 1rem 2rem;
+    max-width: 40%;
+    position: absolute;
+    top: 32.5%
+}
+.sideText p {
+    margin-top: .5rem;
+}
+.sideText h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+.sideText button {
+    color: #fff;
+    font-weight: 600;
+    background-color: #ff4c00;
+    border-style: none;
+    padding: 1.7rem;
+    margin-bottom: 1rem;
+}
+.sideText button:hover {
+    background-color: #cc3d00;
+    text-decoration: underline;
+}
+.slideshow::before {
+    content: "";
+    z-index: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 7.5rem;
+    position: absolute;
+    top: 65%
+}
+
+/* seccion destacamos */
+.contDestacamos {
+    display: flex;
+    flex-direction: column;
+    margin: 7rem auto;
+}
+.destacamos {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+.destacamosContenedores {
+    display: flex;
+}
+.destacamos img {
+    max-width: 60%;
+}
+
+/* seccion reciente*/
+.contReciente {
+    display: flex;
+    flex-direction: column;
+}
+.recienteContenedores {
+    display: flex;
+}
+.reciente {
+    display: flex;
+    /*margin: auto;*/
+}
+.reciente img {
+    width: 30rem;
+}
+
 /* footer */
 .icons {
     background-color: #fff;
@@ -113,4 +194,7 @@ body {
 }
 .footerLinks {
     display: flex;
+}
+.footerLinks li {
+    list-style: none;
 }
