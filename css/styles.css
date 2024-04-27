@@ -14,6 +14,9 @@ body {
     font-size: medium;
     text-decoration: none;
 }
+body p {
+    line-height: 2.3rem;
+}
 /*----------------------------------------------------*/
 
 .navbar {
@@ -42,12 +45,24 @@ body {
     display: flex;
     margin: 0;
 }
+.navbarLinks li:hover {
+    text-decoration: underline;
+}
 .navbarLinks li {
     margin: auto 1rem;
     list-style: none;
 }
 .navbarLinks button {
-    margin-bottom: .5rem;
+    padding: 4.5% 2rem;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+.navbarLinks img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(103%) contrast(102%);
+}
+.navbarLinks button:hover {
+    background-color: #727272;
 }
 .navbarMain {
     display: flex;
@@ -56,12 +71,16 @@ body {
 }
 .subNavbar1 {
     display: flex;
+    list-style: none;
     position: absolute;
     left: 53.3%;
-    top: 5%
+    top: 4.2%
 }
 .subNavbar1 li {
-    margin: 1rem 3rem;
+    margin: 1rem 1.5rem;
+}
+.subNavbar1 li:hover {
+    text-decoration: underline;
 }
 .subNavbar2 {
     display: flex;
@@ -69,8 +88,7 @@ body {
     margin-left: 40rem;
 }
 .subNavbar2 .logo {
-    max-height: 10rem;
-    margin: 2rem auto 4rem auto;
+    margin: 2.5rem auto;
 }
 .navbarCaps, .subNavbar2 a {
     font-size: 1.8rem;
@@ -78,14 +96,28 @@ body {
     font-weight: 700;
     list-style: none;
     text-decoration: none;
-    margin: auto auto 1rem;
+}
+.navbarCaps {
+    padding: 0;
+    margin: 8rem 0 0 3rem;
+}
+.navbarCaps li {
+    padding: 2rem;
+}
+.navbarCaps li:hover {
+    padding: 2rem;
+    background-color: #00362f;
+}
+.navbarCaps a:hover {
+    color: #009c88;
 }
 .subNavbar2 ul {
     display: flex;
+    justify-content: space-around;
 }
 .subNavbar2 li {
-    margin: auto 1.5rem 2rem 1.5rem;
-    width: 30%;
+    height: 10rem;
+    width: 32%;
 }
 .navbar::after {
     content: "";
@@ -139,39 +171,136 @@ body {
     position: absolute;
     top: 65%
 }
+.infoBoxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 63%;
+    margin: 3rem auto 4.7rem auto;
+}
+.contDestacamos, .contReciente {
+    box-shadow: 0 .5rem .4rem -.3rem #9999998c;
+}
+.titulosInfoBox {
+    display: flex;
+    justify-content: space-between;
+    background-color:#00362f;
+    color: #fff;
+    margin-bottom: 1.4rem;
+}
+.titulosInfoBox img {
+    margin: auto 1.5rem auto 2rem;
+}
+.contDestacamos, .contReciente {
+    margin: 2rem;
+    background-color: #fff;
+}
+.contDestacamos ul, .contReciente ul {
+    list-style: none;
+    margin: 1rem 0;
+}
 
 /* seccion destacamos */
 .contDestacamos {
     display: flex;
     flex-direction: column;
-    margin: 7rem auto;
+    margin-top: 7rem;
 }
 .destacamos {
     display: flex;
     flex-direction: column;
-    flex-basis: 50%;
+    flex-basis: 20%;
+    align-items: center;
+    margin: 1rem 0;
 }
 .destacamosContenedores {
     display: flex;
+    justify-content: space-around;
 }
 .destacamos img {
-    max-width: 60%;
+    max-width: 99%;
+}
+.destacamos a {
+    max-width: 99%;
+}
+.tituloContDestacamos {
+    font-size: 2rem;
+    font-weight: 400;
+    text-decoration: none;
+    color:#004f45;
+    margin: 1.5rem 0;
+}
+.tituloContDestacamos:hover {
+    text-decoration: underline;
+    color: #009c88;
 }
 
 /* seccion reciente*/
 .contReciente {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+.infoBoxes h2 {
+    width: fit-content;
+    padding-bottom: 1rem;
+}
+.tituloContReciente a{
+    font-weight: 600;
+    font-size: large;
+    text-decoration: none;
+    color: #004f45;
+}
+.tituloContReciente a:hover {
+    text-decoration: underline;
+    color: #009c88;
+}
+.orangeText a {
+    font-variant: small-caps;
+    font-size: medium;
+    color: #ff4c00;
+    text-decoration: none;
+}
+.orangeText a:hover {
+    color: #cc3d00;
+    text-decoration: underline;
+}
+.grayText {
+    color: #999;
 }
 .recienteContenedores {
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.recienteContenedores ul {
+    align-items: center;
 }
 .reciente {
     display: flex;
-    /*margin: auto;*/
+    max-width: 45%;
+}
+.reciente ul {
+    margin-top: 0;
+    padding-left: 3rem;
+}
+.reciente li {
+    margin-bottom: 1rem;
 }
 .reciente img {
-    width: 30rem;
+    width: 20rem;
+}
+.recienteToprow {
+    margin-bottom: 4rem;
+}
+.recienteToprow::after {
+    content: "";
+    background-color: rgb(106, 106, 106, .3);
+    width: 28%;
+    height: .1rem;
+    position:absolute;
+    display: table;
+    top: 146%;
 }
 
 /* footer */
@@ -179,6 +308,14 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: center;
+    padding: 2rem 0;
+}
+.icons img {
+    filter: grayscale(100%);
+    transition: filter .5s;
+}
+.icons img:hover {
+    filter: grayscale(0%);
 }
 .contFooter {
     display: flex;
