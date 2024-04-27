@@ -38,9 +38,6 @@ body p {
 .whiteText a:visited {
     color: white;
 }
-.searchIcon {
-    margin-top: .5rem;
-}
 .navbarLinks {
     display: flex;
     margin: 0;
@@ -52,16 +49,36 @@ body p {
     margin: auto 1rem;
     list-style: none;
 }
-.navbarLinks button {
-    padding: 4.5% 2rem;
+.navbarLink {
+    display: flex;
+    margin: 0;
+}
+.navbarLink li {
+    margin: 0 1rem;
+    list-style: none;
+}
+.downArrow {
+    padding: 6.28% 2rem;
     background-color: transparent;
     color: #fff;
     border: none;
 }
-.navbarLinks img {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(103%) contrast(102%);
+.searchIcon {
+    padding: .6rem 1.5rem;
+    background-color: #009c88;
+    border: none;
+    margin-bottom: .8rem;
 }
-.navbarLinks button:hover {
+.searchIcon:hover {
+    background-color: #004f45;
+}
+.navIcon, .rightArrow {
+    width: 1.15rem;
+    margin-left: .2rem;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(103%) contrast(102%);
+    object-fit: none;
+}
+.downArrow:hover {
     background-color: #727272;
 }
 .navbarMain {
@@ -188,7 +205,7 @@ body p {
     color: #fff;
     margin-bottom: 1.4rem;
 }
-.titulosInfoBox img {
+.infoBoxIcon {
     margin: auto 1.5rem auto 2rem;
 }
 .contDestacamos, .contReciente {
@@ -267,11 +284,26 @@ body p {
 }
 .grayText {
     color: #999;
+    font-size: 1.3rem;
 }
 .recienteContenedores {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+.reciente .mediumFont p {
+    margin-bottom: 0;
+}
+.verMas {
+    font-size: 1.6rem;
+    margin-right: 1.5rem;
+}
+.titulosInfoBox a {
+    text-decoration: none;
+    color: #fff;
+}
+.titulosInfoBox a:hover {
+    text-decoration: underline;
 }
 .recienteContenedores ul {
     align-items: center;
@@ -300,7 +332,7 @@ body p {
     height: .1rem;
     position:absolute;
     display: table;
-    top: 146%;
+    top: 149%;
 }
 
 /* footer */
@@ -323,15 +355,42 @@ body p {
     background-color: #004f45;
 }
 .acreditacion {
-    display: flex;
     background-color: #00362f;
 }
-.acreditacion img {
-    max-width: 10%;
+.acreditacionCont {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+.acreditacionCont img {
+    max-width: 13%;
+}
+.lineaVertical {
+    margin: 1.5rem
+}
+.lineaVertical::after {
+    display: flex;
+    content: "";
+    background-color: #eee;
+    width: .1rem;
+    height: 10rem;
+    position: relative;
 }
 .footerLinks {
     display: flex;
 }
 .footerLinks li {
     list-style: none;
+}
+.footerCopyright {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+.footerCopyright a {
+    color: #fff;
+}
+.footerCopyright a:hover {
+    color: #009c88;
+    text-decoration: none;
 }
