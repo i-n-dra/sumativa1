@@ -14,7 +14,7 @@ body {
     font-size: medium;
     text-decoration: none;
 }
-body p {
+body p, body li {
     line-height: 2.3rem;
 }
 /*----------------------------------------------------*/
@@ -65,7 +65,7 @@ body p {
 }
 .searchIcon {
     padding: .6rem 1.5rem;
-    background-color: #009c88;
+    background-color: #008272;
     border: none;
     margin-bottom: .8rem;
 }
@@ -121,11 +121,8 @@ body p {
 .navbarCaps li {
     padding: 2rem;
 }
-.navbarCaps li:hover {
-    padding: 2rem;
+.navbarCaps li:hover, .navbarCaps a:hover {
     background-color: #00362f;
-}
-.navbarCaps a:hover {
     color: #009c88;
 }
 .subNavbar2 ul {
@@ -184,9 +181,33 @@ body p {
     z-index: 0;
     width: 100%;
     background-color: #fff;
-    height: 7.5rem;
+    height: 11rem;
     position: absolute;
     top: 65%
+}
+.buttonsSlideshow {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 66%;
+    left: 90%;
+}
+.buttonsSlideshow button {
+    padding: .8rem;
+    border-radius: 50%;
+    margin: .7rem;
+}
+.buttonsSlideshow button:hover {
+    border: .3rem solid #fff;
+    background-color: #fff;
+}
+.buttonNotselected {
+    background-color:#fff;
+    border: .3rem solid #00362f;
+}
+.buttonSelected {
+    background-color: #00362f;
+    border: .3rem solid #fff;
 }
 .infoBoxes {
     display: flex;
@@ -354,6 +375,15 @@ body p {
     flex-direction: column;
     background-color: #004f45;
 }
+.greenText {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #009c88;
+    margin-top: 0;
+}
+.greenText:hover {
+    text-decoration: underline;
+}
 .acreditacion {
     background-color: #00362f;
 }
@@ -378,14 +408,33 @@ body p {
 }
 .footerLinks {
     display: flex;
+    margin: 2rem auto 3rem auto;
+}
+.footerLinks ul {
+    margin-top: 0;
 }
 .footerLinks li {
     list-style: none;
+    margin: 0 auto 1rem auto;
+}
+.footerLinks ul {
+    max-width: 18.5rem;
+    padding: 0;
+    margin: 0 4rem 0 0;
+}
+.footerLinks img {
+    max-width: 6.5%;
+    height: min-content;
+    margin-right: 5.5rem;
+}
+.footerLinks a:hover {
+    text-decoration: underline;
 }
 .footerCopyright {
     background-color: black;
-    color: #fff;
+    color: #ddd;
     text-align: center;
+    padding: .5rem;
 }
 .footerCopyright a {
     color: #fff;
